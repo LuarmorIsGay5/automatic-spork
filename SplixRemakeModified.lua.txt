@@ -709,7 +709,7 @@ function Library:SetOpen(bool)
 		end 
 	end
 
-	function Library:Notification(message, duration, color)
+	function Library:Notif(message, duration, color)
 		local notification = {Container = nil, Objects = {}}
 		--
 		local Position = Vector2.new(20, 20)
@@ -831,7 +831,7 @@ function Library:SetOpen(bool)
 		local Pages = Library.Pages;
 		local Sections = Library.Sections;
 		--
-function Library:Window(Options)
+function Library:House(Options)
     local Window = {
         Pages = {};
         Sections = {};
