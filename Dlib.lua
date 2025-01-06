@@ -35,7 +35,7 @@ local drag = function(obj, latency)
     end)
 
     obj.InputChanged:Connect(function(inp)
-        if (inp.UserInputType == Enum.UserInputType.MouseMovement) then
+        if (inp.UserInputType == Enum.UserInputType.Touch) then
             input = inp
         end
     end)
