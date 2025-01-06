@@ -22,7 +22,7 @@ local drag = function(obj, latency)
     end
 
     obj.InputBegan:Connect(function(inp)
-        if (inp.UserInputType == Enum.UserInputType.MouseButton1) then
+        if (inp.UserInputType == Enum.UserInputType.Touch) then
             toggled = true
             start = inp.Position
             startPos = obj.Position
@@ -484,7 +484,7 @@ function magic:CreateWindow(titly)
                             { Size = UDim2.new(0, math.clamp(ms.X - Slide.AbsolutePosition.X, 0, 226), 0, 14) }):Play()
                     end)
                     releaseconnection = uis.InputEnded:Connect(function(Mouse)
-                        if Mouse.UserInputType == Enum.UserInputType.MouseButton1 then
+                        if Mouse.UserInputType == Enum.UserInputType.Touch then
                             val = math.floor((((tonumber(max) - tonumber(min)) / 226) * Slide.AbsoluteSize.X) +
                                 tonumber(min))
                             pcall(function()
